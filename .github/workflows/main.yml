@@ -27,3 +27,11 @@ jobs:
           context: .
           push: true
           tags: imortaltears/python-api:latest
+          
+      - name: Build and push frontend image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./frontend
+          push: true
+          tags: imortaltears/frontend-ui:latest
+

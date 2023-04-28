@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  frontend:
+    image: imortaltears/frontend-ui
+    ports:
+      - "3000:3000"
+
+  python-api:
+    image: imortaltears/python-api
+    ports:
+      - "8080:8080"
+
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: your_postgres_user
+      POSTGRES_PASSWORD: your_postgres_password
+      POSTGRES_DB: your_postgres_db
+    ports:
+      - "5432:5432"

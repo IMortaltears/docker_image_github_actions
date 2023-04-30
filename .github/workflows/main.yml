@@ -2,8 +2,8 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches:
-      - main # or the name of the default branch of your repository
+    tags:
+      - "*"
 
 jobs:
   build-and-push:

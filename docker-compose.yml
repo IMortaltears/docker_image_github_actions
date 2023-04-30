@@ -5,6 +5,7 @@ services:
     image: imortaltears/frontend-ui
     ports:
       - "3000:3000"
+
   python-api:
     image: imortaltears/python-api
     ports:
@@ -18,3 +19,8 @@ services:
       POSTGRES_DB: my_postgres_db
     ports:
       - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

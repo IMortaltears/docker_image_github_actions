@@ -8,7 +8,8 @@ RUN npm install
 
 COPY . .
 
-COPY public/ public/
+# Add this line to copy the public folder with the index.html file
+COPY public /usr/src/app/public
 
 EXPOSE 3000
 

@@ -2,12 +2,12 @@ version: '3'
 
 services:
   frontend:
-    image: imortaltears/frontend-ui
+    build: ./frontend
     ports:
       - "3000:3000"
 
   python-api:
-    image: imortaltears/python-api
+    build: .
     ports:
       - "8080:8080"
 

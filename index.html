@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker App</title>
+</head>
+<body>
+    <h1>Time Tracker App</h1>
+    <form action="{{ url_for('add_entry') }}" method="POST">
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" name="activity" required>
+        <br>
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" id="start_time" name="start_time" required>
+        <br>
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" id="end_time" name="end_time">
+        <br>
+        <button type="submit">Add Entry</button>
+    </form>
+    <h2>Time Tracking Entries:</h2>
+    <table>
+        <tr>
+            <th>Activity</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.activity }}</td>
+            <td>{{ entry.start_time }}</td>
+            <td>{{ entry.end
+            <td>{{ entry.end_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

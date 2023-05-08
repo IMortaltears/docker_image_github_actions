@@ -16,5 +16,7 @@ EXPOSE 8080
 # Define environment variable
 ENV NAME World
 
+#USER test
+
 # Run app.py when the container launches
 CMD ["python", "app.py"]

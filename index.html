@@ -1,39 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Tracker App</title>
-</head>
-<body>
-    <h1>Time Tracker App</h1>
-    <form action="{{ url_for('add_entry') }}" method="POST">
-        <label for="activity">Activity:</label>
-        <input type="text" id="activity" name="activity" required>
-        <br>
-        <label for="start_time">Start Time:</label>
-        <input type="datetime-local" id="start_time" name="start_time" required>
-        <br>
-        <label for="end_time">End Time:</label>
-        <input type="datetime-local" id="end_time" name="end_time">
-        <br>
-        <button type="submit">Add Entry</button>
-    </form>
-    <h2>Time Tracking Entries:</h2>
-    <table>
-        <tr>
-            <th>Activity</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-        </tr>
-        {% for entry in entries %}
-        <tr>
-            <td>{{ entry.activity }}</td>
-            <td>{{ entry.start_time }}</td>
-            <td>{{ entry.end
-            <td>{{ entry.end_time }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-</body>
+    <title>Hospital App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hospital App</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Doctors</a></li>
+        <li><a href="#">Patients</a></li>
+        <li><a href="#">Appointments</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Welcome to Hospital App</h2>
+      <p>Here you can manage your appointments, search for doctors, and view your medical history.</p>
+      <form>
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search">
+        <button type="submit">Go</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 Hospital App. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
